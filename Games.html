@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>GamesWeb</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(18, 18, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ff5a5f;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #ff1744;
+        cursor: pointer;
+      }
+
+      .Game {
+        width: 100%;
+        margin-top: 2%;
+        text-align: center;
+      }
+
+      .nav {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      input[type="search"] {
+        width: 40%;
+        min-width: 250px;
+        height: 40px;
+        border-radius: 15px;
+        background-color: transparent;
+        border: 1px solid #ff5a5f;
+        text-align: center;
+        color: white;
+      }
+
+      input::placeholder {
+        color: #ccc;
+      }
+
+      input:hover {
+        border-color: #ff1744;
+      }
+
+      .ui {
+        width: 70%;
+        height: 50vh;
+        background-image: url(Gamezone.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 2% auto;
+        border-radius: 10px;
+      }
+
+      .foot {
+        width: 90%;
+        margin: 3% auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+
+      .temp {
+        background-color: rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        flex-wrap: wrap;
+      }
+
+      .temp:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      }
+
+      .p1 {
+        flex: 1 1 45%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        border-radius: 10px;
+      }
+
+      .info {
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .info h2 {
+        color: #ff5a5f;
+        font-size: 1.5rem;
+      }
+
+      .info p {
+        font-size: 1rem;
+        color: #ddd;
+        line-height: 1.4rem;
+      }
+
+      .btn {
+        padding: 8px 12px;
+        border: none;
+        background-color: #ff5a5f;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        align-self: start;
+      }
+
+      .btn:hover {
+        background-color: #ff1744;
+      }
+
+      .btn a {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* RESPONSIVE DESIGN */
+      @media (max-width: 1024px) {
+        .ui {
+          width: 90%;
+          height: 40vh;
+        }
+        a {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          gap: 15px;
+        }
+        input[type="search"] {
+          width: 80%;
+        }
+        .temp {
+          flex-direction: column;
+          text-align: center;
+        }
+        .p1,
+        .info {
+          width: 100%;
+        }
+        .p1 {
+          height: 180px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .info h2 {
+          font-size: 1.2rem;
+        }
+        .info p {
+          font-size: 0.9rem;
+        }
+        .btn {
+          font-size: 0.9rem;
+          padding: 6px 10px;
+        }
+        .ui {
+          height: 35vh;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Game">
+      <a href="Games.html" target="_self">Games.com</a>
+    </div>
+
+    <div class="nav">
+      <input type="search" placeholder="Search Games" />
+      <a href="login.html" target="_self"><i class="fa-solid fa-user"></i> <b>Login</b></a>
+      <a href="Contact.html" target="_self"><i class="fa-solid fa-phone"></i> <b>Contact Us</b></a>
+    </div>
+
+    <div class="ui"></div>
+
+    <div class="foot">
+      <!-- Game 1 -->
+      <div class="temp">
+        <div class="p1" style="background-image: url(Templerun.jpg);"></div>
+        <div class="info">
+          <h2>Temple Run</h2>
+          <p>
+            Temple Run is an endless running video game where you escape from evil monkeys while navigating ancient temples. Collect coins, jump, slide, and turn your way to the highest score.
+          </p>
+          <button class="btn">
+            <a href="https://poki.com/en/g/temple-run-2" target="_blank">Play Now</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game 2 -->
+      <div class="temp">
+        <div class="p1" style="background-image: url(Subway.jpg);"></div>
+        <div class="info">
+          <h2>Subway Surfers</h2>
+          <p>
+            Run, dodge trains, and collect coins in Subway Surfers. Join Jake and his friends on a thrilling chase across colorful cities around the world!
+          </p>
+          <button class="btn">
+            <a href="https://poki.com/en/g/subway-surfers" target="_blank">Play Now</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="temp">
+        <div class="p1" style="background-image: url(mr-racer-car-racing.avif);"></div>
+        <div class="info">
+          <h2>Car Racing</h2>
+          <p>
+            Race through city streets and highways in this fast-paced car racing game. Avoid traffic, collect boosts, and be the fastest racer on the road.
+          </p>
+          <button class="btn">
+            <a href="https://poki.com/en/g/mr-racer-car-racing" target="_blank">Play Now</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game 4 -->
+      <div class="temp">
+        <div class="p1" style="background-image: url(sweet-world.avif);"></div>
+        <div class="info">
+          <h2>Candy Crush</h2>
+          <p>
+            Match colorful candies and clear levels in this sweet puzzle adventure. Use power-ups and strategy to reach high scores.
+          </p>
+          <button class="btn">
+            <a href="https://poki.com/en/g/sweet-world" target="_blank">Play Now</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game 5 -->
+      <div class="temp">
+        <div class="p1" style="background-image: url(lethal-sniper-3d-army-soldier.avif);"></div>
+        <div class="info">
+          <h2>Lethal Sniper 3D</h2>
+          <p>
+            Destroy enemies and experience realistic sniper action in this immersive 3D shooting game.
+          </p>
+          <button class="btn">
+            <a href="https://poki.com/en/g/lethal-sniper-3d-army-soldier" target="_blank">Play Now</a>
+          </button>
+        </div>
+      </div>
+      <div class="temp">
+        <div class="p1" style="background-image: url(vectaria-io.avif);"></div>
+        <div class="info">
+          <h2>Vectaria.io</h2>
+          <p>
+            Explore the pixel world, build, mine, and survive against enemies in this multiplayer block game.
+          </p>
+          <button class="btn">
+            <a href="https://poki.com/en/g/vectaria-io" target="_blank">Play Now</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Contact Us | GamesWeb</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(18, 18, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ff5a5f;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #ff1744;
+        cursor: pointer;
+      }
+
+      .Game {
+        width: 100%;
+        text-align: center;
+        margin-top: 2%;
+      }
+
+      .nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      input[type="search"] {
+        width: 40%;
+        max-width: 400px;
+        min-width: 200px;
+        height: 35px;
+        border-radius: 15px;
+        background-color: transparent;
+        border: 1px solid #ff5a5f;
+        text-align: center;
+        color: white;
+        padding: 6px;
+      }
+
+      input::placeholder {
+        color: #ccc;
+      }
+
+      input:hover {
+        border-color: #ff1744;
+      }
+
+      
+      .contact-container {
+        width: 80%;
+        max-width: 900px;
+        margin: 5% auto;
+        background-color: rgba(255, 255, 255, 0.08);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+      }
+
+      .contact-container h1 {
+        text-align: center;
+        color: #ff5a5f;
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
+
+      .contact-container p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #ddd;
+      }
+
+      ul {
+        list-style: none;
+        text-align: center;
+        line-height: 2rem;
+        font-size: 1.1rem;
+      }
+
+      ul li {
+        margin: 10px 0;
+      }
+
+      ul li b {
+        color: #ff5a5f;
+      }
+
+      .social {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      .social a {
+        font-size: 1.1rem;
+        margin: 0 8px;
+        color: #ff5a5f;
+        transition: 0.3s;
+      }
+
+      .social a:hover {
+        color: #ff1744;
+      }
+      @media (max-width: 768px) {
+        a {
+          font-size: 1.6rem;
+        }
+
+        .nav {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        input[type="search"] {
+          width: 80%;
+        }
+
+        .contact-container {
+          width: 90%;
+          padding: 30px 20px;
+        }
+
+        .contact-container h1 {
+          font-size: 1.6rem;
+        }
+
+        .contact-container p {
+          font-size: 1rem;
+        }
+
+        ul {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        a {
+          font-size: 1.4rem;
+        }
+
+        .contact-container {
+          width: 95%;
+          padding: 20px 15px;
+        }
+
+        .contact-container h1 {
+          font-size: 1.4rem;
+        }
+
+        ul {
+          font-size: 0.95rem;
+          line-height: 1.7rem;
+        }
+
+        .social a {
+          font-size: 1rem;
+          margin: 0 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Logo / Brand -->
+    <div class="Game">
+      <a href="Games.html" target="_self">Games.com</a>
+    </div>
+
+    <!-- Navbar -->
+    <div class="nav">
+      <input type="search" placeholder="Search Games" />
+      <a href="login.html" target="_self"
+        ><i class="fa-solid fa-user"></i><b> Login</b></a
+      >
+      <a href="Contact.html" target="_self"
+        ><i class="fa-solid fa-phone"></i><b> Contact Us</b></a
+      >
+    </div>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>
+        If you have any questions, suggestions, or issues, feel free to reach
+        out to us!
+      </p>
+
+      <ul>
+        <li><b>Email:</b> support@gamesweb.com</li>
+        <li><b>Phone:</b> +91 98765 43210</li>
+        <li><b>Address:</b> 123 Gaming Street, Gamer City, India</li>
+      </ul>
+
+      <div class="social">
+        <p>Follow us on social media:</p>
+        <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a> |
+        <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a> |
+        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </body>
+</html>
+

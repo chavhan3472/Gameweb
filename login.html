@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>GamesWeb - Login</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(18, 18, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ff5a5f;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #ff1744;
+        cursor: pointer;
+      }
+
+      .Game {
+        width: 100%;
+        text-align: center;
+        margin-top: 2%;
+      }
+
+      .nav {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      input[type="search"] {
+        width: 40%;
+        max-width: 400px;
+        min-width: 200px;
+        height: 35px;
+        border-radius: 15px;
+        background-color: transparent;
+        border: 1px solid #ff5a5f;
+        color: white;
+        text-align: center;
+      }
+
+      input[type="search"]::placeholder {
+        color: #ccc;
+      }
+
+      .main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .login-box {
+        width: 400px;
+        max-width: 90%;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s;
+      }
+
+      .login-box:hover {
+        transform: scale(1.02);
+      }
+
+      .login-box h2 {
+        color: #ff5a5f;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #ff5a5f;
+        color: white;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      input::placeholder {
+        color: #aaa;
+      }
+
+      input:focus {
+        border-bottom: 2px solid #ff1744;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ff5a5f;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #ff1744;
+      }
+
+      .link {
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .link a {
+        color: #ff5a5f;
+        text-decoration: underline;
+      }
+
+      .link a:hover {
+        color: #ff1744;
+      }
+
+      /* ---------------------- RESPONSIVE SECTION ---------------------- */
+      @media (max-width: 768px) {
+        a {
+          font-size: 1.5rem;
+        }
+
+        .nav {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        input[type="search"] {
+          width: 80%;
+        }
+
+        .login-box {
+          padding: 30px 20px;
+          gap: 15px;
+        }
+
+        .login-box h2 {
+          font-size: 1.5rem;
+        }
+
+        .btn {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .login-box {
+          width: 100%;
+          max-width: 350px;
+          padding: 20px 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          font-size: 0.9rem;
+        }
+
+        .btn {
+          font-size: 0.85rem;
+        }
+
+        .link {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Game">
+      <a href="Games.html" target="_self">Games.com</a>
+    </div>
+
+    <div class="nav">
+      <input type="search" placeholder="Search Games" />
+      <a href="login.html"><i class="fa-solid fa-user"></i><b> Login</b></a>
+      <a href="Contact.html"><i class="fa-solid fa-phone"></i><b> Contact Us</b></a>
+    </div>
+
+    <div class="main">
+      <div class="login-box">
+        <h2>Login to GamesWeb</h2>
+        <input type="text" placeholder="Enter your user ID" />
+        <input type="password" placeholder="Enter your password" />
+        <a href="GameWeb.html" target="_self">
+          <button class="btn">Login</button>
+        </a>
+        <div class="link">
+          Don't have an account? <a href="#">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
